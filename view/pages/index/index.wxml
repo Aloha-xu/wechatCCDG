@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container" wx:if="{{isLogin}}">
+  <view class="cover-image">
+    <image src="{{coverImage}}" bindtap="getImage"></image>
+  </view>
+  <view class="user-info">
+    <span class="nick-name">{{userInfo.nickName}}</span>
+    <image src="{{userInfo.avatarUrl}}" class="user-cover"></image>
+  </view>
+  <view class="dynamic">
+    <view class="item" wx:for="{{dynamicList}}" wx:key="id">
+      <image src="{{item.pic}}" class="dynamic-cover"></image>
+      <view class="right">
+        <view class="time">{{item.addTime}}</view>
+        <view class="content">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="login" wx:if="{{!isLogin}}">
+  <image src="../../static/icon/logo.png" class="logo" mode="widthFix"></image>
+  <button bindtap="login">登录</button>
+</view>

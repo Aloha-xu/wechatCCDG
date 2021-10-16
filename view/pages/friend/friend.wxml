@@ -1,0 +1,35 @@
+<view class="detail-container">
+  <view class="dynamic" wx:for="{{articleDetail}}" wx:key="index">
+    <view class="cover-image">
+      <image src="{{item.cover}}" bindtap="getImage"></image>
+    </view>
+    <view class="right">
+      <span class="nick-name">{{item.name}}</span>
+      <view class="textarea">{{item.content}}</view>
+      <view class="pic-area">{{item.pic}}</view>
+      <view class="time">{{item.addTime}}</view>
+      <view class="tools">
+        <view class="like">{{item.likeCount}}</view>
+        <view class="comment-btn"></view>
+      </view>
+      <view class="comment-item" wx:for="{{item.comment}}" wx:for-item="item1" wx:key="item1">
+        <span class="comment-name">{{item1.name}}</span>
+        <span class="comment-text">{{item1.content}}</span>
+      </view>
+      <!--输入评论的框-->
+      <view class="input-area" wx:if="{{true}}">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__bd">
+              <form bindsubmit="bindFormSubmit">
+                <textarea class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="请输入文本"
+                  bindinput="bindinputFun" style="height: 1.1em" value="{{commentConent}}"/>
+                </form>
+            </view>
+          </view>
+          <button type="primary" bindtap="submit" data-id="{{item.id}}" class="btn">提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
