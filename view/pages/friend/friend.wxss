@@ -1,1 +1,4 @@
-/* pages/friend/friend.wxss */
+.image-icon{
+  width: 25px;
+  height: 25px;
+}

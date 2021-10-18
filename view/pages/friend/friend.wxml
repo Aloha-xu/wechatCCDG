@@ -9,15 +9,22 @@
       <view class="pic-area">{{item.pic}}</view>
       <view class="time">{{item.addTime}}</view>
       <view class="tools">
-        <view class="like">{{item.likeCount}}</view>
-        <view class="comment-btn"></view>
+        <view class="like" bindtap="handleLikeFun" data-id="{{item.id}}" data-index="{{index}}">
+          <image src="../../static/icon/like.png" class="image-icon" wx:if="{{item.isLike}}"></image>
+          <image src="../../static/icon/like-active.png" class="image-icon" wx:if="{{!item.isLike}}"></image>
+          {{item.likeCount}}
+        </view>
+        <view class="comment-btn" bindtap="handleCommentShow" data-index="{{index}}">
+          <image src="../../static/icon/comment.png" class="image-icon"></image>
+          评论
+        </view>
       </view>
       <view class="comment-item" wx:for="{{item.comment}}" wx:for-item="item1" wx:key="item1">
         <span class="comment-name">{{item1.name}}</span>
         <span class="comment-text">{{item1.content}}</span>
       </view>
-      <!--输入评论的框-->
-      <view class="input-area" wx:if="{{true}}">
+      <!--输入评论的框  这里可以修改为点一下弹出系统自带的输入框-->
+      <view class="input-area" wx:if="{{isShowComment[index].isShow}}">
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_active">
             <view class="weui-cell__bd">
