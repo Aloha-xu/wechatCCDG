@@ -13,7 +13,7 @@
   <view class='edit-footer'>
     <view class='footer-row' bindtap='chooseLocation'>
       <text class='iconfont icon-zuobiaonormal'></text>
-      <text>{{location==null?'所在位置':location}}</text>
+      <text>{{location == null ? '所在位置' : location}}</text>
       <text class='iconfont icon-arrow-right'></text>
     </view>
     <view class='footer-row'>

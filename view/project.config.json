@@ -57,6 +57,32 @@
     "gamePlugin": {
       "list": []
     },
-    "miniprogram": {}
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail/1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/friend/friend",
+          "pathName": "pages/friend/friend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/find/find",
+          "pathName": "pages/find/find",
+          "scene": null
+        }
+      ]
+    }
   }
 }

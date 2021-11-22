@@ -1,2 +1,30 @@
-<!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<view>
+  数据后台
+</view>
+<view class="find">
+  <view class="dynamic-btn" bindtap="toShare">
+    <view class="top">
+      <image src="../../static/icon/comment.png"></image>
+      <view>动态</view>
+    </view>
+    <view class="bottom">{{dynamicCount}}</view>
+  </view>
+  <view class="like-count-btn" bindtap="toDynamic">
+    <view class="top">
+      <image src="../../static/icon/comment.png"></image>
+      <view>点赞</view>
+    </view>
+    <view class="bottom">{{likeCount}}</view>
+  </view>
+  <view class="comment-btn" bindtap="toDynamic">
+    <view class="top">
+      <image src="../../static/icon/comment.png" ></image>
+      <view>评论</view>
+    </view>
+    <view class="bottom">{{commentCount}}</view>
+  </view>
+  <view class="other" wx:for="{{5}}">
+    未开发功能{{item}}
+  </view>
+
+</view>

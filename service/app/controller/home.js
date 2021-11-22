@@ -24,7 +24,7 @@ class HomeController extends Controller {
   }
 
   async getArticleList() {
-    let sql = 'SELECT * FROM article'
+    let sql = 'SELECT * FROM article order by id desc'
     let result = await this.app.mysql.query(sql)
     //拿到动态的id数组
     let id = result.map(({ id }) => id)

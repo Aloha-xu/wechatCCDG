@@ -1,27 +1,31 @@
-<view class="detail-container">
-  <view class="dynamic" wx:for="{{articleDetail}}" wx:key="index">
+<view class="friend-container">
+  <view class="friend" wx:for="{{articleDetail}}" wx:key="index">
     <view class="cover-image">
       <image src="{{item.cover}}" bindtap="getImage"></image>
     </view>
     <view class="right">
       <span class="nick-name">{{item.name}}</span>
       <view class="textarea">{{item.content}}</view>
-      <view class="pic-area">{{item.pic}}</view>
+      <view class="pic-area" wx:if="{{item.pic}}">
+        <image class="pic-area-item" src="{{item.pic}}" bindtap="ViewImage" data-url="{{item.pic}} "></image>
+      </view>
       <view class="time">{{item.addTime}}</view>
       <view class="tools">
         <view class="like" bindtap="handleLikeFun" data-id="{{item.id}}" data-index="{{index}}">
           <image src="../../static/icon/like.png" class="image-icon" wx:if="{{item.isLike}}"></image>
           <image src="../../static/icon/like-active.png" class="image-icon" wx:if="{{!item.isLike}}"></image>
-          {{item.likeCount}}
+          <span>{{item.likeCount}}</span>
         </view>
         <view class="comment-btn" bindtap="handleCommentShow" data-index="{{index}}">
           <image src="../../static/icon/comment.png" class="image-icon"></image>
-          评论
+          <span>评论</span>
         </view>
       </view>
-      <view class="comment-item" wx:for="{{item.comment}}" wx:for-item="item1" wx:key="item1">
-        <span class="comment-name">{{item1.name}}</span>
+      <view class="comment">
+        <view class="comment-item" wx:for="{{item.comment}}" wx:for-item="item1" wx:key="item1">
+        <span class="comment-name">{{item1.name}}：</span>
         <span class="comment-text">{{item1.content}}</span>
+      </view>
       </view>
       <!--输入评论的框  这里可以修改为点一下弹出系统自带的输入框-->
       <view class="input-area" wx:if="{{isShowComment[index].isShow}}">

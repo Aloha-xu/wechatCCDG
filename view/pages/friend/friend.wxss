@@ -2,3 +2,62 @@
   width: 25px;
   height: 25px;
 }
+.cover-image{
+  width: 50px;
+  padding: 0 10px;
+}
+.cover-image image{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.friend{
+  display: flex;
+  margin-bottom: 20px;
+}
+.right{
+  width: 18rem;
+}
+.nick-name{
+  width: 100%;
+  font-size: larger;
+  color: rgb(112, 112, 255);
+  font-weight: 900;
+}
+.textarea{
+  width: 100%;
+  word-wrap: break-word;
+}
+.pic-area{
+  width: 100%;
+}
+.pic-area-item{
+  width: 7rem;
+  height: 7rem;
+}
+
+.tools{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.like,.comment-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+span{
+  padding-left: 5px;
+}
+
+.comment{
+  background-color: rgb(239, 239, 239);
+  border-radius: 5px;
+}
+
+.comment-name{
+  color: rgb(112, 112, 255);
+  font-weight: 700;
+}

@@ -1,1 +1,27 @@
 /* pages/find/find.wxss */
+image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+}
+.find{
+  display: flex;
+  flex-wrap: wrap;
+}
+.dynamic-btn,.like-count-btn,.comment-btn,.other{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 200rpx;
+  height:200rpx;
+  margin: 80rpx;
+  border-radius: 20rpx;
+  background-color: rgba(199, 199, 199,0.5);
+}
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}

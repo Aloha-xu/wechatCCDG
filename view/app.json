@@ -20,19 +20,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "主页"
+        "text": "主页",
+        "iconPath": "./static/icon/home.png",
+        "selectedIconPath": "./static/icon/home-active.png"
       },
       {
         "pagePath": "pages/share/share",
-        "text": "分享"
+        "text": "分享",
+        "iconPath": "./static/icon/share.png",
+        "selectedIconPath": "./static/icon/share-active.png"
       },
       {
         "pagePath": "pages/friend/friend",
-        "text": "朋友圈"
+        "text": "朋友圈",
+        "iconPath": "./static/icon/friend.png",
+        "selectedIconPath": "./static/icon/friend-active.png"
       },
       {
         "pagePath": "pages/find/find",
-        "text": "发现"
+        "text": "发现",
+        "iconPath": "./static/icon/find.png",
+        "selectedIconPath": "./static/icon/find-active.png"
       }
     ]
   }

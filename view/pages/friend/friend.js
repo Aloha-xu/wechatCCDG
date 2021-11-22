@@ -9,6 +9,12 @@ Page({
       commentConent: e.detail.value
     })
   },
+  ViewImage(e) {
+    wx.previewImage({
+      urls: [e.currentTarget.dataset.url],
+      current: [e.currentTarget.dataset.url]
+    });
+  },
   getAstricleDetail() {
     var that = this
     //做一个点一下 触发下面方法
